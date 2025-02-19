@@ -1,19 +1,21 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router';
 
-function BasicExample() {
+function InitCard({init}) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src="https://quasa.io/storage/images/news/Ggm2ZWUSsLBBtUwph7NlXpGPzNB3RZQY0rQ4xq02.jpg" />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some 
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Card.Title>{init.title}</Card.Title>
+        <Card.Text>{init.shortDescription}</Card.Text>
+        <Card.Text>Собрано голосов {init.votesFor}</Card.Text>
+        <Link to={`/card/${init.id}`}>
+        <Button>Подробнее</Button>
+        </Link>
       </Card.Body>
     </Card>
   );
 }
 
-export default BasicExample;
+export default InitCard;
