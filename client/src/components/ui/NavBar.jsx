@@ -11,7 +11,7 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/">Главная страница</Nav.Link>
             <Nav.Link as={Link} to="/signin">Войти</Nav.Link>
             <Nav.Link as={Link} to="/signup">Регистрация</Nav.Link>
           </Nav>
