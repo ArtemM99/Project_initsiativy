@@ -1,7 +1,7 @@
 import React from 'react';
-import './MainPage.css'; 
+import './twoinit.css'; 
 
-const MainPage = () => {
+const twoinit = () => {
   return (
     <div className="container">
       <header className="header">
@@ -38,4 +38,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default twoinit;
