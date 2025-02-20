@@ -17,6 +17,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+    
       middleName: {
         type: Sequelize.STRING,
         allowNull: true
@@ -25,6 +26,11 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true
+      },
+      password: {
+        type: Sequelize.TEXT,
+        allowNull: false,
+        
       },
       federalDistrict: {
         type: Sequelize.STRING
