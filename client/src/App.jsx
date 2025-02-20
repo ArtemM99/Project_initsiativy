@@ -3,24 +3,19 @@ import MainPage from './components/pages/MainPage';
 // import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import LoginForm from './components/ui/LoginForm';
-import SignupPage from './components/ui/RegisterForm';
+import SignupPage from './components/ui/RegisterPage';
 import InitDetail from './components/pages/InitDetail';
+import axiosInstance, { setAccessToken } from './axiosInstance'
+import { useState } from 'react';
 
 
 function App() {
   const [user, setUser] = useState();
-  const signupHandler = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target)
-    const data = Object.fromEntries(formData);
-    const res = await axiosInstance.post('/auth/signup', data);
-    // обработка ответа res (сюда допишем позже)
-}
-  const [count, setCount] = useState(0)
 
     const signupHandler = async (event) => {
     event.preventDefault();
     const data =  Object.fromEntries(new FormData(event.target));
+    console.log(data)
     const res = await axiosInstance.post('/auth/register', data);
     if (res.status !== 200) alert('Ошибка регистрации');
     setUser(res.data.user);

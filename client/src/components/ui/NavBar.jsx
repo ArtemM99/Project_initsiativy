@@ -3,7 +3,7 @@ import { NavDropdown } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link, useNavigate } from 'react-router';
+import { Link } from 'react-router';
 
 
 function NavBar({ handleFilterSelect }) {
@@ -58,10 +58,10 @@ function NavBar({ handleFilterSelect }) {
             <Nav.Link as={Link} to="/">
               Главная страница
             </Nav.Link>
-            <Nav.Link as={Link} to="/signin">
+            <Nav.Link as={Link} to="/login">
               Войти
             </Nav.Link>
-            <Nav.Link as={Link} to="/signup">
+            <Nav.Link as={Link} to="/register">
               Регистрация
             </Nav.Link>
           </Nav>
@@ -71,4 +71,4 @@ function NavBar({ handleFilterSelect }) {
   );
 }
 
-// export default NavBar;
+export default NavBar;
