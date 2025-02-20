@@ -1,7 +1,7 @@
 import React from 'react';
 import './twoinit.css'; 
 
-const twoinit = () => {
+const TwoInit = () => {
   return (
     <div className="container">
       <header className="header">
@@ -38,4 +38,4 @@ const twoinit = () => {
   );
 };
 
-export default twoinit;
+export default TwoInit; 
