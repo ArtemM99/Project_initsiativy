@@ -1,6 +1,9 @@
+
 import React from 'react';
 
-export default function SignupPage({ signupHandler }) {
+export default function SignupPage({ signupHandler, user }) {
+  if(user )
+console.log(user)
   return (
     <form onSubmit={signupHandler}>
       <input name="firstName" type="text" placeholder="Имя" required />

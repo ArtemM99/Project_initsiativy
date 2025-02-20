@@ -6,7 +6,6 @@ const cookieConfig = require('../configs/cookieConfig');
 
 authRouter.post('/register', async (req, res) => {
   const { email, password, ...rest } = req.body;
-  console.log(req.body)
   if (!rest.firstName || !email || !password) 
 {
     return res.status(400).json({ error: 'Missing required fields' });
@@ -16,15 +15,7 @@ authRouter.post('/register', async (req, res) => {
       where: { email },
       defaults: { password: await bcrypt.hash(password, 10), ...rest },
     });
-    // const { firstName, lastName, middleName, email, federalDistrict,region,municipality, password } = req.body;
-    // if (!firstName || !lastName || !middleName || !email || !federalDistrict || !region || !municipality || !password) {
-    //   return res.status(400).json({ error: 'Missing required fields' });
-    // }
-    // try {
-    //   const [user, created] = await User.findOrCreate({
-    //     where: { email },
-    //     defaults: {password: await bcrypt.hash(password, 10), firstName, lastName, middleName, federalDistrict,region,municipality},
-    //   });
+    
     if (!created) {
       return res.status(400).json({ error: 'User already exists' });
     }
