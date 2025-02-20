@@ -6,7 +6,9 @@ const cookieConfig = require('../configs/cookieConfig');
 
 authRouter.post('/register', async (req, res) => {
   const { email, password, ...rest } = req.body;
-  if (!rest.firstName || !email || !password) {
+  console.log(req.body)
+  if (!rest.firstName || !email || !password) 
+{
     return res.status(400).json({ error: 'Missing required fields' });
   }
   try {
