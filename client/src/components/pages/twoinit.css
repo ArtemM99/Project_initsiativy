@@ -23,7 +23,7 @@ body {
 }
 
 .header {
-    background-color: rgba(8, 117, 234, 0.9); /* Полупрозрачный фон для шапки */
+    background-color: rgba(8, 117, 234, 0.9); 
     padding: 20px;
     display: flex;
     justify-content: flex-end;
@@ -58,7 +58,7 @@ body {
 }
 
 .initiative-box {
-    background: white; /* Убираем прозрачность */
+    background: white; 
     border-radius: 12px;
     padding: 30px;
     width: 90%;
