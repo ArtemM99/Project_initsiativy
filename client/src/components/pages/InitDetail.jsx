@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import axios from 'axios';
+import { Card } from 'react-bootstrap';
+
 
 export default function InitDetail() {
-  const { id } = useParams(); // Получаем id из URL
+  const { id } = useParams();
   const [initDetail, setInitDetail] = useState(null);
 
   useEffect(() => {
@@ -15,54 +17,24 @@ export default function InitDetail() {
   if (!initDetail) {
     return <p>Загрузка...</p>;
   }
-
   return (
-      return (
-        <CardGroup>
-          <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in
-                to additional content. This content is a little bit longer.
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </Card.Footer>
-          </Card>
-          <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This card has supporting text below as a natural lead-in to
-                additional content.
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </Card.Footer>
-          </Card>
-          <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in
-                to additional content. This card has even longer content than the
-                first to show that equal height action.
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </Card.Footer>
-          </Card>
-        </CardGroup>
-      );
-    }
-    
-    export default GroupExample;
+    <div
+      className="d-flex justify-content-center align-items-start"
+      style={{ minHeight: '100vh', marginTop: '30px' }}
+    >
+      <Card style={{ width: '70rem', height: 'auto' }}>
+        {/* <Card.Img
+          variant="top"
+          src="https://quasa.io/storage/images/news/Ggm2ZWUSsLBBtUwph7NlXpGPzNB3RZQY0rQ4xq02.jpg"
+        /> */}
+        <Card.Body>
+          <Card.Title>Инициатива: {initDetail.title}</Card.Title>
+          <Card.Title>Город: {initDetail.region}</Card.Title>
+          <Card.Title>Автор: {initDetail.userId}</Card.Title>
+          <Card.Text>{initDetail.description}</Card.Text>
+          <Card.Text>Собрано голосов {initDetail.votesFor}</Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
+  );
 }
-
