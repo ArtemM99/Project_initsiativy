@@ -10,10 +10,10 @@ function NavBar() {
         <Navbar.Brand>Инициативы.ru</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+        <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">Главная страница</Nav.Link>
-            <Nav.Link as={Link} to="/signin">Войти</Nav.Link>
-            <Nav.Link as={Link} to="/signup">Регистрация</Nav.Link>
+            <Nav.Link as={Link} to="/register">Войти</Nav.Link>
+            <Nav.Link as={Link} to="/login">Регистрация</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
