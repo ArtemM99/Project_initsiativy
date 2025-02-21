@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const path = require('path');
 const app = express();
 const initiativRouter = require('./routes/initiativRouter');
 const authRouter = require('./routes/authRouter');
@@ -19,5 +20,10 @@ app.use('/api/auth', authRouter);
 app.use('/api/ai', aiRouter);
 
 app.use('/api/tokens', tokenRouter);
+
+app.use(express.static(path.join(__dirname, '..', 'dist')));
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));
+});
 
 module.exports = app;
