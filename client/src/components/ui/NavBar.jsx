@@ -5,7 +5,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router';
 
-
 function NavBar({ handleFilterSelect }) {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -15,11 +14,7 @@ function NavBar({ handleFilterSelect }) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavDropdown
-              id="nav-dropdown-dark-example"
-              title="Фильтр"
-              menuVariant="dark"
-            >
+            <NavDropdown id="nav-dropdown-dark-example" title="Фильтр" menuVariant="dark">
               <NavDropdown.Item key="all" onClick={() => handleFilterSelect('')}>
                 Все тематики
               </NavDropdown.Item>
@@ -57,6 +52,9 @@ function NavBar({ handleFilterSelect }) {
 
             <Nav.Link as={Link} to="/">
               Главная страница
+            </Nav.Link>
+            <Nav.Link as={Link} to="/addinitiative">
+              Добавить инициативу
             </Nav.Link>
             <Nav.Link as={Link} to="/login">
               Войти
