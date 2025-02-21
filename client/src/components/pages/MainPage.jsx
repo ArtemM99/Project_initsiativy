@@ -24,7 +24,7 @@ export default function MainPage() {
 
   return (
     <>
-    <NavDropdown style={{marginLeft:'auto', marginRight: 'auto'}} id="nav-dropdown-dark-example" title="Фильтр" menuVariant="dark">
+    <NavDropdown style={{ display:'flex', justifyContent: 'center'}} id="nav-dropdown-dark-example" title="Фильтр" menuVariant="dark">
               <NavDropdown.Item key="all" onClick={() => handleFilterSelect('')}>
                 Все тематики
               </NavDropdown.Item>
