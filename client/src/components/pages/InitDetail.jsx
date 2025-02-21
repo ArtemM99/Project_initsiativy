@@ -25,12 +25,12 @@ export default function InitDetail() {
       <Card style={{ width: '70rem', height: 'auto' }}>
         <Card.Img style={{width: '350px', height:'250px',  marginLeft: 'auto', marginRight: 'auto'}}
           variant="top"
-          src="https://quasa.io/storage/images/news/Ggm2ZWUSsLBBtUwph7NlXpGPzNB3RZQY0rQ4xq02.jpg"
+          src={initDetail.votesTotal}
         />
         <Card.Body>
           <Card.Title>Инициатива: {initDetail.title}</Card.Title>
           <Card.Title>Город: {initDetail.region}</Card.Title>
-          <Card.Title>Автор: {initDetail.userId}</Card.Title>
+          <Card.Title>Автор: {initDetail.id}</Card.Title>
           <Card.Text>{initDetail.description}</Card.Text>
           <Card.Text>Собрано голосов {initDetail.votesFor}</Card.Text>
         </Card.Body>
