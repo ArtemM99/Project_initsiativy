@@ -7,7 +7,7 @@ import { Link } from 'react-router';
 import { NavDropdown } from 'react-bootstrap';
 
 export default function Layout({ user, handleFilterSelect, logoutHandler}) {
-
+  
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -17,42 +17,6 @@ export default function Layout({ user, handleFilterSelect, logoutHandler}) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-
-            <NavDropdown id="nav-dropdown-dark-example" title="Фильтр" menuVariant="dark">
-              <NavDropdown.Item key="all" onClick={() => handleFilterSelect('')}>
-                Все тематики
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                key="ecology"
-                onClick={() => handleFilterSelect('Экология')}
-              >
-                Экология
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                key="healthcare"
-                onClick={() => handleFilterSelect('Здравоохранение')}
-              >
-                Здравоохранение
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                key="transport"
-                onClick={() => handleFilterSelect('Транспорт')}
-              >
-                Транспорт
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                key="education"
-                onClick={() => handleFilterSelect('Образование')}
-              >
-                Образование
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                key="social"
-                onClick={() => handleFilterSelect('Социальная защита')}
-              >
-                Социальная защита
-              </NavDropdown.Item>
-            </NavDropdown>
               <Nav.Link as={Link} to="/">
                 Главная страница
               </Nav.Link>
@@ -77,7 +41,7 @@ export default function Layout({ user, handleFilterSelect, logoutHandler}) {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Outlet />
+      <Outlet handleFilterSelect={handleFilterSelect} />
     </div>
   );
 }
