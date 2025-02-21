@@ -5,7 +5,7 @@ import './styles.css';
 
 function InitCard({ init }) {
   return (
-    <Card className="card-style" style={{ width: '300px', height: '400px', marginBottom: '25px'}}>
+    <Card className="card-style" style={{ width: '300px', height: '400px', marginBottom: '20px', marginLeft:'20'}}>
       <Card.Img
         style={{ width: 'auto', height: '180px' }}
         variant="top"
