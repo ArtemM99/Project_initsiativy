@@ -5,10 +5,11 @@ import './styles.css';
 
 function InitCard({ init }) {
   return (
-    <Card className="card-style" style={{ width: '300px', height: '450px' }}>
+    <Card className="card-style" style={{ width: '300px', height: '400px', marginBottom: '25px'}}>
       <Card.Img
+        style={{ width: 'auto', height: '180px' }}
         variant="top"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLKrKZfURA2L5tdShI6A9DkFKrEokpPoWIg&s"
+        src={init.votesTotal}
       />
       <Card.Body>
         <Card.Title>{init.title}</Card.Title>

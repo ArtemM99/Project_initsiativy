@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     region: DataTypes.STRING,
     municipality: DataTypes.STRING,
     votesFor: DataTypes.INTEGER,
-    votesTotal: DataTypes.INTEGER,
+    votesTotal: DataTypes.TEXT,
     dataEnd: DataTypes.DATE,
     status: DataTypes.STRING,
     tema: DataTypes.STRING,

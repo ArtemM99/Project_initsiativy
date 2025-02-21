@@ -35,7 +35,7 @@ module.exports = {
         allowNull: false
       },
       votesTotal: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.TEXT,
         allowNull: false
       },
       dataEnd: {
