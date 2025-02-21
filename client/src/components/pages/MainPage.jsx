@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import InitCard from '../ui/InitCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from '../ui/NavBar';
+
 
 export default function MainPage() {
   const [init, setInit] = useState([]);
@@ -23,7 +23,6 @@ export default function MainPage() {
 
   return (
     <div>
-    <NavBar handleFilterSelect={handleFilterSelect} />
       <div className="row mt-4 m-4">
         {filteredInit.length > 0 ? (
           filteredInit.map((initItem) => (

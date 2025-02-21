@@ -32,7 +32,7 @@ export default function LoginForm({ loginHandler }) {
           </Button>
         </Form>
         <div className="text-center mt-3">
-          <Link to="/auth/register" className="text-decoration-none">
+          <Link to="/register" className="text-decoration-none">
             Ещё нет аккаунта?
           </Link>
         </div>

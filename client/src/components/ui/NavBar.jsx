@@ -1,11 +1,10 @@
-import { Button } from 'react-bootstrap';
+
 import { NavDropdown } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router';
-
-function NavBar({ handleFilterSelect }) {
+function NavBar({ handleFilterSelect, user }) {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -49,7 +48,7 @@ function NavBar({ handleFilterSelect }) {
                 Социальная защита
               </NavDropdown.Item>
             </NavDropdown>
-
+            <Nav.Link>Привет, {user ? user.firstName : 'Гость'}</Nav.Link>
             <Nav.Link as={Link} to="/">
               Главная страница
             </Nav.Link>

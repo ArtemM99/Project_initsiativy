@@ -23,10 +23,10 @@ export default function InitDetail() {
       style={{ minHeight: '100vh', marginTop: '30px' }}
     >
       <Card style={{ width: '70rem', height: 'auto' }}>
-        {/* <Card.Img
+        <Card.Img style={{width: '350px', height:'250px',  marginLeft: 'auto', marginRight: 'auto'}}
           variant="top"
           src="https://quasa.io/storage/images/news/Ggm2ZWUSsLBBtUwph7NlXpGPzNB3RZQY0rQ4xq02.jpg"
-        /> */}
+        />
         <Card.Body>
           <Card.Title>Инициатива: {initDetail.title}</Card.Title>
           <Card.Title>Город: {initDetail.region}</Card.Title>
