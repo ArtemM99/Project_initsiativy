@@ -53,6 +53,9 @@ export default function Layout({ user, handleFilterSelect, logoutHandler}) {
                 Социальная защита
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={Link} to="/addinitiative">
+              Добавить инициативу
+            </Nav.Link>
               <Nav.Link as={Link} to="/">
                 Главная страница
               </Nav.Link>

@@ -55,6 +55,7 @@ function NavBar({ handleFilterSelect, user }) {
             <Nav.Link as={Link} to="/addinitiative">
               Добавить инициативу
             </Nav.Link>
+           
             <Nav.Link as={Link} to="/login">
               Войти
             </Nav.Link>
